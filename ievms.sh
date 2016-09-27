@@ -163,7 +163,8 @@ check_ext_pack() {
 
 # Download and install `unar` from Google Code.
 install_unar() {
-	  local url="http://wakaba.c3.cx/releases/TheUnarchiver/unar1.10.1.zip"
+#    local url="http://theunarchiver.googlecode.com/files/unar1.5.zip"
+	local url="http://wakaba.c3.cx/releases/TheUnarchiver/unar1.10.1.zip"
     local archive=`basename "${url}"`
 
     download "unar" "${url}" "${archive}" "d548661e4b6c33512074df81e39ed874"
@@ -387,7 +388,7 @@ build_ievm() {
     local url
     if [ "${os}" == "Win10" ]
     then
-        url="https://az792536.vo.msecnd.net/vms/VMBuild_20150801/VirtualBox/MSEdge/Mac/Microsoft%20Edge.Win10.For.Mac.VirtualBox.zip"
+		url="https://az792536.vo.msecnd.net/vms/VMBuild_20150801/VirtualBox/MSEdge/Windows/Microsoft%20Edge.Win10.For.Windows.VirtualBox.zip"
     else
         url="http://virtualization.modern.ie/vhd/IEKitV1_Final/VirtualBox/OSX/${archive}"
     fi
@@ -399,7 +400,7 @@ build_ievm() {
         IE8_Win7.zip) md5="21b0aad3d66dac7f88635aa2318a3a55" ;;
         IE9_Win7.zip) md5="58d201fe7dc7e890ad645412264f2a2c" ;;
         IE10_Win8.zip) md5="cc4e2f4b195e1b1e24e2ce6c7a6f149c" ;;
-        MSEdge_Win10.zip) md5="c1011b491d49539975fb4c3eeff16dae" ;;
+        MSEdge_Win10.zip) md5="2a591bd4e59c8fc1ca9818c31b99666b" ;;
     esac
     
     log "Checking for existing OVA at ${ievms_home}/${ova}"
